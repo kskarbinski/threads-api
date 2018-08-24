@@ -20,11 +20,11 @@ class ThreadApplicationHandler(object):
 
         thread_model = FindModel(models_list=threads).by_id(thread_application_model.thread)
         # Add user to thread
-        thread_model.users.append(thread_application_model.user)
+        thread_model.users.insert(0, thread_application_model.user)
         # Update thread
         thread_model.updated_at = int(time())
         # Add thread to users threads
-        users_threads[thread_application_model.user].append(thread_model)
+        users_threads[thread_application_model.user].insert(0, thread_model)
 
         return thread_application_model
 

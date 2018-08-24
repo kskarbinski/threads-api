@@ -26,8 +26,8 @@ class ThreadInviteHandler(object):
         # Register invitations
         for thread_invitation_model in thread_invitation_models:
             # Register invitation for thread
-            threads_invitations[thread_model.id].append(thread_invitation_model)
+            threads_invitations[thread_model.id].insert(0, thread_invitation_model)
             # Register invitation for user
-            users_thread_invitations[thread_invitation_model.user].append(thread_invitation_model)
+            users_thread_invitations[thread_invitation_model.user].insert(0, thread_invitation_model)
 
         return ModelsList(list_of_models=thread_invitation_models)

@@ -5,7 +5,7 @@ from app_data.threads import users_thread_applications, users_thread_invitations
 
 class SignupHandler(object):
     def post(self, username, password, firstname, lastname):
-        # Creat UserModel and CredentialsModel
+        # Create UserModel and CredentialsModel
         user_model = UserModel(
             username=username,
             firstname=firstname,
@@ -17,8 +17,8 @@ class SignupHandler(object):
         )
 
         # Register user
-        users.append(user_model)
-        users_credentials.append(credentials_model)
+        users.insert(0, user_model)
+        users_credentials.insert(0, credentials_model)
         # Register user's threads
         users_threads[user_model.id] = list()
         # Register user's thread applications

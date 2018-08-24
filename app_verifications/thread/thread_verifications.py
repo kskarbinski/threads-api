@@ -30,13 +30,13 @@ class ThreadVerifications(ThreadChecks):
         self.verify_thread_exists()
         if self.check_excludes_owner(user_ids=user_ids):
             return True
-        HttpException.throw_422("You may perform this action on thread owner")
+        HttpException.throw_422("You may not perform this action on thread owner")
 
     def verify_user_is_member(self, user_id):
         self.verify_thread_exists()
         if self.check_user_is_member(user_id=user_id):
             return True
-        HttpException.throw_422("User with id '{user_id}' is not a member of the thread".format(user_id=user_id))
+        HttpException.throw_403("User with id '{user_id}' is not a member of the thread".format(user_id=user_id))
 
     def verify_thread_is_not_private(self):
         self.verify_thread_exists()

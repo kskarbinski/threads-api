@@ -3,7 +3,6 @@ from flask import request
 
 from app_auth import auth
 from app_handlers import ThreadInvitationHandler
-from app_verifications.thread import ThreadVerifications
 from app_verifications.invitation import InvitationVerifications
 
 
@@ -24,7 +23,7 @@ class ThreadsInvitationsInvitationIdRoute(Resource):
 
         # Invitation verifications
         invitation_verifications = InvitationVerifications(user_id=caller_user_id, value=invitation_id)
-        # Verify user is invitation owner
+        # Verify user is invitee
         invitation_verifications.verify_user_is_invitee(user_id=caller_user_id)
 
         # Get thread invitation

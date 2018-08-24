@@ -3,6 +3,9 @@ from flask_restful import Resource, reqparse
 
 from app_auth import auth
 from app_handlers import ThreadsHandler
+from app_verifications.thread import ThreadVerifications
+from app_utils.validators.length import validate_length
+from app_errors.http_exceptions import HttpException
 
 
 class ThreadsRoute(Resource):
@@ -34,6 +37,14 @@ class ThreadsRoute(Resource):
     def post(self):
         args = self.reqparse.parse_args()
         user_id = auth.user_id
+
+        # Validate thread name
+        if ThreadVerifications(by="name", value=args.name).check_thread_exists():
+            HttpException.throw_409("Thread name already taken")
+        elif args.name.isdigit():
+            HttpException.throw_422("Thread name must not be a number")
+        elif not validate_length(2, 50, args.name):
+            HttpException.throw_422("Thread name length must be between 2 and 50 characters")
 
         # Create thread
         thread_model = ThreadsHandler().post(

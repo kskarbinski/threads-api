@@ -4,11 +4,12 @@ from uuid import uuid4
 
 
 class BaseModel(object):
-    def __init__(self):
+    def __init__(self, model_type):
         current_time_in_seconds = int(time())
         self.created_at = current_time_in_seconds
         self.updated_at = current_time_in_seconds
         self.id = str(uuid4())
+        self.model_type = model_type
 
     def to_dict(self, camel_case=False):
         return self._to_dict(self, camel_case=camel_case)

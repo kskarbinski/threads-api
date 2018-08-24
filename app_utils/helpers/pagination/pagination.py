@@ -14,7 +14,7 @@ class Paginate(object):
 
     def paginate(self):
         start = self.start or 1
-        limit = self.limit or 10
+        limit = self.limit or 100
 
         len_resource = len(self.resource)
         if not len_resource:

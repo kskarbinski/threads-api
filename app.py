@@ -43,37 +43,37 @@ if __name__ == "__main__":
     # threads_handler
     api.add_resource(ThreadsRoute, "/threads", endpoint="threads")
     # thread_invite handler
-    api.add_resource(ThreadsThreadIdInviteRoute, "/threads/<string:thread_id>/invite", endpoint="thread_invite")
+    api.add_resource(ThreadsThreadIdInviteRoute, "/threads/id/<string:thread_id>/invite", endpoint="thread_invite")
     # thread_handler
-    api.add_resource(ThreadsThreadIdRoute, "/threads/<string:thread_id>", endpoint="thread_by_thread_id")
+    api.add_resource(ThreadsThreadIdRoute, "/threads/id/<string:thread_id>", endpoint="thread_by_thread_id")
     # thread_kick_handler
-    api.add_resource(ThreadsThreadIdKickRoute, "/threads/<string:thread_id>/kick", endpoint="thread_kick")
+    api.add_resource(ThreadsThreadIdKickRoute, "/threads/id/<string:thread_id>/kick", endpoint="thread_kick")
     # thread_apply_handler
-    api.add_resource(ThreadsThreadIdApplyRoute, "/threads/<string:thread_id>/apply", endpoint="thread_apply")
+    api.add_resource(ThreadsThreadIdApplyRoute, "/threads/id/<string:thread_id>/apply", endpoint="thread_apply")
     # thread_invitations_handler
     api.add_resource(
-        ThreadsThreadIdInvitationsRoute, "/threads/<string:thread_id>/invitations", endpoint="thread_invitations")
+        ThreadsThreadIdInvitationsRoute, "/threads/id/<string:thread_id>/invitations", endpoint="thread_invitations")
     # thread_applications_handler
     api.add_resource(
-        ThreadsThreadIdApplicationsRoute, "/threads/<string:thread_id>/applications", endpoint="thread_applications")
+        ThreadsThreadIdApplicationsRoute, "/threads/id/<string:thread_id>/applications", endpoint="thread_applications")
     # thread_messages_handler
-    api.add_resource(ThreadsThreadIdMessagesRoute, "/threads/<string:thread_id>/messages", endpoint="thread_messages")
+    api.add_resource(ThreadsThreadIdMessagesRoute, "/threads/id/<string:thread_id>/messages", endpoint="thread_messages")
     # thread_message_handler
     api.add_resource(
         ThreadsThreadIdMessageRoute,
-        "/threads/<string:thread_id>/messages/<string:message_id>",
+        "/threads/id/<string:thread_id>/messages/id/<string:message_id>",
         endpoint="thread_message"
     )
     # thread_invitation_handler
     api.add_resource(
         ThreadsThreadIdInvitationRoute,
-        "/threads/<string:thread_id>/invitations/<string:invitation_id>",
+        "/threads/id/<string:thread_id>/invitations/id/<string:invitation_id>",
         endpoint="thread_invitation"
     )
     # thread_application_handler
     api.add_resource(
         ThreadsThreadIdApplicationRoute,
-        "/threads/<string:thread_id>/applications/<string:application_id>",
+        "/threads/id/<string:thread_id>/applications/id/<string:application_id>",
         endpoint="thread_application"
     )
     # threads_invitations_handler
@@ -83,13 +83,13 @@ if __name__ == "__main__":
     # thread_invitation_handler
     api.add_resource(
         ThreadsInvitationsInvitationIdRoute,
-        "/threads/invitations/<string:invitation_id>",
+        "/threads/invitations/id/<string:invitation_id>",
         endpoint="user_thread_invitation"
     )
     # thread_application_handler
     api.add_resource(
         ThreadsApplicationsApplicationIdRoute,
-        "/threads/applications/<string:application_id>",
+        "/threads/applications/id/<string:application_id>",
         endpoint="user_thread_application"
     )
 

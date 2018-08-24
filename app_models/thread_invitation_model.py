@@ -4,7 +4,7 @@ from app_types.invitation.status import InvitationStatusType
 
 class ThreadInvitationModel(BaseModel):
     def __init__(self, user, thread_id, invited_by, users_in_thread, invitation_status=InvitationStatusType.PENDING):
-        super(ThreadInvitationModel, self).__init__()
+        super(ThreadInvitationModel, self).__init__(model_type="ThreadInvitationModel")
         self.user = user
         self.thread = thread_id
         self.status = invitation_status.value

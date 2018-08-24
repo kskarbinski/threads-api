@@ -34,7 +34,7 @@ class ThreadsHandler(object):
         )
 
         # Register thread
-        threads.append(thread_model)
+        threads.insert(0, thread_model)
         # Register thread invitations
         threads_invitations[thread_model.id] = list()
         # Register thread applications
@@ -42,7 +42,7 @@ class ThreadsHandler(object):
         # Register thread messages
         threads_messages[thread_model.id] = list()
         # Register thread for user
-        users_threads[user_id].append(thread_model)
+        users_threads[user_id].insert(0, thread_model)
 
         # Return thread
         return thread_model

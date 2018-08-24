@@ -22,6 +22,6 @@ class ThreadMessagesHandler(object):
         )
 
         # Register message
-        threads_messages[thread_model.id].append(thread_message_model)
+        threads_messages[thread_model.id].insert(0, thread_message_model)
 
         return thread_message_model

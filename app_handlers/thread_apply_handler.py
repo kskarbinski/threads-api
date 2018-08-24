@@ -13,9 +13,9 @@ class ThreadApplyHandler(object):
         # Register application
 
         # Register application for thread
-        threads_applications[thread_model.id].append(thread_application_model)
+        threads_applications[thread_model.id].insert(0, thread_application_model)
         # Register application for user
-        users_thread_applications[user_id].append(thread_application_model)
+        users_thread_applications[user_id].insert(0, thread_application_model)
 
         # If user is already invited simply accept the invitation
         if user_id in threads_invitations[thread_model.id]:

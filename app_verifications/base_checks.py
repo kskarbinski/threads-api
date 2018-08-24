@@ -3,7 +3,7 @@ from app_utils.helpers.finders import FindModel
 
 class BaseChecks(object):
     def __init__(self, container, value=None, by="id", model=None):
-        assert value or model
+        assert (value is not None) or model
 
         self.value = value
         self.by = by
