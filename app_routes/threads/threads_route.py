@@ -23,6 +23,11 @@ class ThreadsRoute(Resource):
         super(ThreadsRoute, self).__init__()
 
     def get(self):
+        """
+        @api {GET} /threads Get threads
+        @apiDescription Get last 100 threads created
+        @apiGroup Thread
+        """
         args = self.reqparse.parse_args()
 
         # Get paginated threads
@@ -35,6 +40,13 @@ class ThreadsRoute(Resource):
         return paginated_threads.jsonify()
 
     def post(self):
+        """
+        @api {POST} /threads Create thread
+        @apiGroup Thread
+
+        @apiParam (JSON param) {String} name Name of the thread. Has to be unique, must not be a number, length 2-50
+        @apiParam (JSON param) {Boolean} private Whether the thread is to be private or not
+        """
         args = self.reqparse.parse_args()
         user_id = auth.user_id
 

@@ -1,1 +1,1 @@
-from .threads_thread_id_application_id_route import ThreadsThreadIdApplicationRoute
+from .threads_thread_id_applications_application_id_route import ThreadsThreadIdApplicationsApplicationIdRoute

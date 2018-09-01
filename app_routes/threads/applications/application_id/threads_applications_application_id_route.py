@@ -9,6 +9,11 @@ class ThreadsApplicationsApplicationIdRoute(Resource):
     decorators = [auth.login_required]
 
     def get(self, application_id):
+        """
+        @api {GET} /threads/applications/<String:application_id> Get sent thread application
+        @apiDescription Get sent thread application by id
+        @apiGroup Thread
+        """
         caller_user_id = auth.user_id
 
         # Verifications
@@ -27,6 +32,11 @@ class ThreadsApplicationsApplicationIdRoute(Resource):
         return thread_application.jsonify()
 
     def delete(self, application_id):
+        """
+        @api {DELETE} /threads/applications/<String:application_id> Cancel sent thread application
+        @apiDescription Cancel sent thread application by id
+        @apiGroup Thread
+        """
         caller_user_id = auth.user_id
 
         # Verifications

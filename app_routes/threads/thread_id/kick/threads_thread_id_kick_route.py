@@ -16,6 +16,12 @@ class ThreadsThreadIdKickRoute(Resource):
         super(ThreadsThreadIdKickRoute, self).__init__()
 
     def post(self, thread_id):
+        """
+        @api {POST} /threads/<String:thread_id>/kick Kick users from thread
+        @apiGroup Thread
+
+        @apiParam (JSON param) {String[]} users List of user ids
+        """
         args = self.reqparse.parse_args()
         caller_user_id = auth.user_id
 

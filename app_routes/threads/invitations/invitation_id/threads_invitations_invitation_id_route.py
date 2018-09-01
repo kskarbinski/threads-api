@@ -17,6 +17,11 @@ class ThreadsInvitationsInvitationIdRoute(Resource):
         super(ThreadsInvitationsInvitationIdRoute, self).__init__()
 
     def get(self, invitation_id):
+        """
+        @api {GET} /threads/invitations/<String:invitation_id> Get received thread invitation
+        @apiDescription Get received thread invitation by id
+        @apiGroup Thread
+        """
         caller_user_id = auth.user_id
 
         # Verifications
@@ -35,6 +40,12 @@ class ThreadsInvitationsInvitationIdRoute(Resource):
         return thread_invitation_model.jsonify()
 
     def post(self, invitation_id):
+        """
+        @api {POST} /threads/invitations/<String:invitation_id> Accept or reject thread invitation
+        @apiGroup Thread
+
+        @apiParam (JSON param) {Boolean} accept Accept or reject the invitation
+        """
         caller_user_id = auth.user_id
         args = self.reqparse.parse_args()
 

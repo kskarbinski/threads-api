@@ -16,6 +16,15 @@ class SignupRoute(Resource):
         super(SignupRoute, self).__init__()
 
     def post(self):
+        """
+        @api {POST} /signup Signup
+        @apiGroup User
+
+        @apiParam (JSON param) {String} username Username. Has to be unique, cannot be a number, length 2-20
+        @apiParam (JSON param) {String} password Password. Length 4-20
+        @apiParam (JSON param) {String} firstname First name. Length 2-20
+        @apiParam (JSON param) {String} lastname Last name. Length 2-50
+        """
         args = self.reqparse.parse_args()
 
         # Verify username

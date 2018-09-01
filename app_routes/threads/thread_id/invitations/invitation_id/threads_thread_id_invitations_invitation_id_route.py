@@ -6,10 +6,15 @@ from app_verifications.thread import ThreadVerifications
 from app_verifications.invitation import InvitationVerifications
 
 
-class ThreadsThreadIdInvitationRoute(Resource):
+class ThreadsThreadIdInvitationsInvitationIdRoute(Resource):
     decorators = [auth.login_required]
 
     def get(self, thread_id, invitation_id):
+        """
+        @api {GET} /threads/<String:thread_id>/invitations/<String:invitation_id> Get sent thread invitation
+        @apiGroup Thread
+        @apiDescription Get sent thread invitation
+        """
         caller_user_id = auth.user_id
 
         # Verifications
@@ -33,6 +38,11 @@ class ThreadsThreadIdInvitationRoute(Resource):
         return thread_invitation_model.jsonify()
 
     def delete(self, thread_id, invitation_id):
+        """
+        @api {DELETE} /threads/<String:thread_id>/invitations/<String:invitation_id> Cancel sent thread invitation
+        @apiGroup Thread
+        @apiDescription Cancel sent thread invitation
+        """
         caller_user_id = auth.user_id
 
         # Verifications

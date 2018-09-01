@@ -18,6 +18,11 @@ class ThreadsThreadIdInvitationsRoute(Resource):
         super(ThreadsThreadIdInvitationsRoute, self).__init__()
 
     def get(self, thread_id):
+        """
+        @api {GET} /threads/<String:thread_id>/invitations Get sent thread invitations
+        @apiGroup Thread
+        @apiDescription Get sent thread invitations
+        """
         args = self.reqparse.parse_args()
         caller_user_id = auth.user_id
 

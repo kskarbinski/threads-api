@@ -21,6 +21,11 @@ class ThreadsThreadIdMessagesRoute(Resource):
         super(ThreadsThreadIdMessagesRoute, self).__init__()
 
     def get(self, thread_id):
+        """
+        @api {GET} /threads/<String:thread_id>/messages Get thread messages
+        @apiGroup Thread
+        @apiDescription Get last 100 thread messages as member of thread
+        """
         args = self.reqparse.parse_args()
         caller_user_id = auth.user_id
 
@@ -41,6 +46,13 @@ class ThreadsThreadIdMessagesRoute(Resource):
         return thread_message_models.jsonify()
 
     def post(self, thread_id):
+        """
+        @api {POST} /threads/<String:thread_id>/messages Send message in thread
+        @apiGroup Thread
+        @apiDescription Send message in thread as thread owner
+
+        @apiParam (JSON param) {String} message Message to send. Length 1-300
+        """
         args = self.reqparse.parse_args()
         caller_user_id = auth.user_id
 

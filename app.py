@@ -16,9 +16,9 @@ from app_routes.threads.thread_id.apply import ThreadsThreadIdApplyRoute
 from app_routes.threads.thread_id.invitations import ThreadsThreadIdInvitationsRoute
 from app_routes.threads.thread_id.applications import ThreadsThreadIdApplicationsRoute
 from app_routes.threads.thread_id.messages import ThreadsThreadIdMessagesRoute
-from app_routes.threads.thread_id.messages.message_id import ThreadsThreadIdMessageRoute
-from app_routes.threads.thread_id.invitations.invitation_id import ThreadsThreadIdInvitationRoute
-from app_routes.threads.thread_id.applications.application_id import ThreadsThreadIdApplicationRoute
+from app_routes.threads.thread_id.messages.message_id import ThreadsThreadIdMessagesMessageIdRoute
+from app_routes.threads.thread_id.invitations.invitation_id import ThreadsThreadIdInvitationsInvitationIdRoute
+from app_routes.threads.thread_id.applications.application_id import ThreadsThreadIdApplicationsApplicationIdRoute
 from app_routes.threads.invitations import ThreadsInvitationsRoute
 from app_routes.threads.applications import ThreadsApplicationsRoute
 from app_routes.threads.invitations.invitation_id import ThreadsInvitationsInvitationIdRoute
@@ -60,19 +60,19 @@ if __name__ == "__main__":
     api.add_resource(ThreadsThreadIdMessagesRoute, "/threads/id/<string:thread_id>/messages", endpoint="thread_messages")
     # thread_message_handler
     api.add_resource(
-        ThreadsThreadIdMessageRoute,
+        ThreadsThreadIdMessagesMessageIdRoute,
         "/threads/id/<string:thread_id>/messages/id/<string:message_id>",
         endpoint="thread_message"
     )
     # thread_invitation_handler
     api.add_resource(
-        ThreadsThreadIdInvitationRoute,
+        ThreadsThreadIdInvitationsInvitationIdRoute,
         "/threads/id/<string:thread_id>/invitations/id/<string:invitation_id>",
         endpoint="thread_invitation"
     )
     # thread_application_handler
     api.add_resource(
-        ThreadsThreadIdApplicationRoute,
+        ThreadsThreadIdApplicationsApplicationIdRoute,
         "/threads/id/<string:thread_id>/applications/id/<string:application_id>",
         endpoint="thread_application"
     )

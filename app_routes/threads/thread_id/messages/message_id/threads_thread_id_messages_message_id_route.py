@@ -8,7 +8,7 @@ from app_verifications.text import TextVerifications
 from app_verifications.message import MessageVerifications
 
 
-class ThreadsThreadIdMessageRoute(Resource):
+class ThreadsThreadIdMessagesMessageIdRoute(Resource):
     decorators = [auth.login_required]
 
     def __init__(self):
@@ -16,9 +16,14 @@ class ThreadsThreadIdMessageRoute(Resource):
         if request.method == "POST":
             self.reqparse.add_argument("message", type=str, required=True, location="json")
 
-        super(ThreadsThreadIdMessageRoute, self).__init__()
+        super(ThreadsThreadIdMessagesMessageIdRoute, self).__init__()
 
     def get(self, thread_id, message_id):
+        """
+        @api {GET} /threads/<String:thread_id>/messages/<String:message_id> Get thread message
+        @apiGroup Thread
+        @apiDescription Get thread message as member of thread
+        """
         caller_user_id = auth.user_id
 
         # Verifications
@@ -37,6 +42,13 @@ class ThreadsThreadIdMessageRoute(Resource):
         return thread_message_model.jsonify()
 
     def post(self, thread_id, message_id):
+        """
+        @api {POST} /threads/<String:thread_id>/messages/<String:message_id> Edit thread message
+        @apiGroup Thread
+        @apiDescription Edit thread message as message owner
+
+        @apiParam (JSON param) {String} message New message. Length 1-300
+        """
         args = self.reqparse.parse_args()
         caller_user_id = auth.user_id
 
@@ -60,6 +72,11 @@ class ThreadsThreadIdMessageRoute(Resource):
         return thread_message_model.jsonify()
 
     def delete(self, thread_id, message_id):
+        """
+        @api {DELETE} /threads/<String:thread_id>/messages/<String:message_id> Remove thread message
+        @apiGroup Thread
+        @apiDescription Remove thread message as message owner
+        """
         caller_user_id = auth.user_id
 
         # Verifications

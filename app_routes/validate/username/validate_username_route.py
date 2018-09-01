@@ -13,6 +13,11 @@ class ValidateUsernameRoute(Resource):
         super(ValidateUsernameRoute, self).__init__()
 
     def get(self):
+        """
+        @api {GET} /validate/<String:username> Validate username
+        @apiGroup User
+        @apiDescription Validate username. Check whether it's already taken and has correct format
+        """
         args = self.reqparse.parse_args()
 
         username_validation_model = UsernameValidationModel()

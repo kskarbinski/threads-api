@@ -17,6 +17,12 @@ class ThreadsThreadIdInviteRoute(Resource):
         super(ThreadsThreadIdInviteRoute, self).__init__()
 
     def post(self, thread_id):
+        """
+        @api {POST} /threads/<String:thread_id>/invite Invite users to thread
+        @apiGroup Thread
+
+        @apiParam (JSON param) {String[]} users List of user ids
+        """
         args = self.reqparse.parse_args()
         caller_user_id = auth.user_id
 

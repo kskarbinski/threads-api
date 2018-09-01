@@ -19,12 +19,14 @@ class ThreadInvitationHandler(object):
         thread_invitation_model.updated_at = int(time())
 
         thread_model = FindModel(models_list=threads).by_id(thread_invitation_model.thread)
-        # Add user to thread
-        thread_model.users.insert(0, thread_invitation_model.user)
-        # Update thread
-        thread_model.updated_at = int(time())
-        # Add thread to users threads
-        users_threads[thread_invitation_model.user].insert(0, thread_model)
+        # Add user to thread only if invitation was accepted
+        if accept:
+            # Add user to thread
+            thread_model.users.insert(0, thread_invitation_model.user)
+            # Update thread
+            thread_model.updated_at = int(time())
+            # Add thread to users threads
+            users_threads[thread_invitation_model.user].insert(0, thread_model)
 
         return thread_invitation_model
 

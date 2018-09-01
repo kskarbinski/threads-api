@@ -8,6 +8,11 @@ class UserRoute(Resource):
     decorators = [auth.login_required]
 
     def get(self):
+        """
+        @api {GET} /user Get user
+        @apiGroup User
+        @apiDescription Get current user details
+        """
         user_model = auth.user_model
         if user_model:
             return user_model.jsonify()

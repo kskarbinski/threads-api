@@ -14,6 +14,11 @@ class UsersRoute(Resource):
         super(UsersRoute, self).__init__()
 
     def get(self):
+        """
+        @api {GET} /users Get users
+        @apiGroup User
+        @apiDescription Get last 100 created users
+        """
         args = self.reqparse.parse_args()
 
         paginated_threads = UsersHandler().get(

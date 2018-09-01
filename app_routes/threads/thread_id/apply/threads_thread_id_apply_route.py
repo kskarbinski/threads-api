@@ -11,6 +11,10 @@ class ThreadsThreadIdApplyRoute(Resource):
     decorators = [auth.login_required]
 
     def post(self, thread_id):
+        """
+        @api {POST} /threads/<String:thread_id>/apply Apply to thread
+        @apiGroup Thread
+        """
         caller_user_id = auth.user_id
 
         # Verifications

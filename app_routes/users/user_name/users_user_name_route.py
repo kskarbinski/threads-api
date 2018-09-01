@@ -9,6 +9,11 @@ class UsersUserNameRoute(Resource):
     decorators = [auth.login_required]
 
     def get(self, username):
+        """
+        @api {GET} /users/<String:username> Get user by username
+        @apiGroup User
+        @apiDescription Get user details by username
+        """
         user_model = UserHandler().get(value=username, by="username")
         if user_model:
             return user_model.jsonify()

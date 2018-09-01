@@ -7,7 +7,7 @@ from app_verifications.thread import ThreadVerifications
 from app_verifications.application import ApplicationVerifications
 
 
-class ThreadsThreadIdApplicationRoute(Resource):
+class ThreadsThreadIdApplicationsApplicationIdRoute(Resource):
     decorators = [auth.login_required]
 
     def __init__(self):
@@ -15,9 +15,14 @@ class ThreadsThreadIdApplicationRoute(Resource):
         if request.method == "POST":
             self.reqparse.add_argument("accept", type=bool, required=True, location="json")
 
-        super(ThreadsThreadIdApplicationRoute, self).__init__()
+        super(ThreadsThreadIdApplicationsApplicationIdRoute, self).__init__()
 
     def get(self, thread_id, application_id):
+        """
+        @api {GET} /threads/<String:thread_id>/applications/<String:application_id> Get received thread application
+        @apiGroup Thread
+        @apiDescription Get received thread application by id
+        """
         caller_user_id = auth.user_id
 
         # Verifications
@@ -41,6 +46,12 @@ class ThreadsThreadIdApplicationRoute(Resource):
         return thread_application_model.jsonify()
 
     def post(self, thread_id, application_id):
+        """
+        @api {POST} /threads/<String:thread_id>/applications/<String:application_id> Accept or reject received thread application
+        @apiGroup Thread
+
+        @apiParam (JSON param) {Boolean} accept Accept or reject the application
+        """
         args = self.reqparse.parse_args()
         caller_user_id = auth.user_id
 
