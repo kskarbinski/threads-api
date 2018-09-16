@@ -5,6 +5,15 @@
     "title": "Cancel sent thread application",
     "description": "<p>Cancel sent thread application by id</p>",
     "group": "Thread",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    ThreadApplicationModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/applications/application_id/threads_applications_application_id_route.py",
     "groupTitle": "Thread",
@@ -16,6 +25,15 @@
     "title": "Delete thread",
     "group": "Thread",
     "description": "<p>Delete thread by id as thread owner</p>",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    ThreadModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/thread_id/threads_thread_id_route.py",
     "groupTitle": "Thread",
@@ -27,6 +45,15 @@
     "title": "Cancel sent thread invitation",
     "group": "Thread",
     "description": "<p>Cancel sent thread invitation</p>",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    ThreadInvitationModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/thread_id/invitations/invitation_id/threads_thread_id_invitations_invitation_id_route.py",
     "groupTitle": "Thread",
@@ -38,6 +65,15 @@
     "title": "Remove thread message",
     "group": "Thread",
     "description": "<p>Remove thread message as message owner</p>",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    ThreadMessageModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/thread_id/messages/message_id/threads_thread_id_messages_message_id_route.py",
     "groupTitle": "Thread",
@@ -49,6 +85,15 @@
     "title": "Get threads",
     "description": "<p>Get last 100 threads created</p>",
     "group": "Thread",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"items\": ThreadModel[]\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/threads_route.py",
     "groupTitle": "Thread",
@@ -60,6 +105,15 @@
     "title": "Get sent thread applications",
     "description": "<p>Get last 100 sent thread applications for current user</p>",
     "group": "Thread",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"items\": ThreadApplicationModel[]\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/applications/threads_applications_route.py",
     "groupTitle": "Thread",
@@ -71,6 +125,15 @@
     "title": "Get sent thread application",
     "description": "<p>Get sent thread application by id</p>",
     "group": "Thread",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    ThreadApplicationModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/applications/application_id/threads_applications_application_id_route.py",
     "groupTitle": "Thread",
@@ -82,6 +145,15 @@
     "title": "Get received thread invitations",
     "description": "<p>Get last 100 received thread applications for current user</p>",
     "group": "Thread",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"items\": ThreadInvitationModel[]\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/invitations/threads_invitations_route.py",
     "groupTitle": "Thread",
@@ -93,6 +165,15 @@
     "title": "Get received thread invitation",
     "description": "<p>Get received thread invitation by id</p>",
     "group": "Thread",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    ThreadInvitationModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/invitations/invitation_id/threads_invitations_invitation_id_route.py",
     "groupTitle": "Thread",
@@ -104,6 +185,15 @@
     "title": "Get thread",
     "group": "Thread",
     "description": "<p>Get thread by id</p>",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    ThreadModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/thread_id/threads_thread_id_route.py",
     "groupTitle": "Thread",
@@ -115,6 +205,15 @@
     "title": "Get received thread applications",
     "group": "Thread",
     "description": "<p>Get received thread applications as thread owner</p>",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"items\": ThreadApplicationModel[]\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/thread_id/applications/threads_thread_id_applications_route.py",
     "groupTitle": "Thread",
@@ -126,6 +225,15 @@
     "title": "Get received thread application",
     "group": "Thread",
     "description": "<p>Get received thread application by id</p>",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    ThreadApplicationModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/thread_id/applications/application_id/threads_thread_id_applications_application_id_route.py",
     "groupTitle": "Thread",
@@ -137,6 +245,15 @@
     "title": "Get sent thread invitations",
     "group": "Thread",
     "description": "<p>Get sent thread invitations</p>",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"items\": ThreadInvitationModel[]\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/thread_id/invitations/threads_thread_id_invitations_route.py",
     "groupTitle": "Thread",
@@ -148,6 +265,15 @@
     "title": "Get sent thread invitation",
     "group": "Thread",
     "description": "<p>Get sent thread invitation</p>",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    ThreadInvitationModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/thread_id/invitations/invitation_id/threads_thread_id_invitations_invitation_id_route.py",
     "groupTitle": "Thread",
@@ -159,6 +285,15 @@
     "title": "Get thread messages",
     "group": "Thread",
     "description": "<p>Get last 100 thread messages as member of thread</p>",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"items\": ThreadMessageModel[]\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/thread_id/messages/threads_thread_id_messages_route.py",
     "groupTitle": "Thread",
@@ -170,6 +305,15 @@
     "title": "Get thread message",
     "group": "Thread",
     "description": "<p>Get thread message as member of thread</p>",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    ThreadMessageModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/thread_id/messages/message_id/threads_thread_id_messages_message_id_route.py",
     "groupTitle": "Thread",
@@ -200,6 +344,15 @@
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    ThreadModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/threads_route.py",
     "groupTitle": "Thread",
@@ -222,6 +375,15 @@
           }
         ]
       }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    ThreadInvitationModel\n}",
+          "type": "JSON"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "app_routes/threads/invitations/invitation_id/threads_invitations_invitation_id_route.py",
@@ -246,6 +408,15 @@
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    ThreadApplicationModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/thread_id/applications/application_id/threads_thread_id_applications_application_id_route.py",
     "groupTitle": "Thread",
@@ -256,6 +427,15 @@
     "url": "/threads/<String:thread_id>/apply",
     "title": "Apply to thread",
     "group": "Thread",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    ThreadApplicationModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/thread_id/apply/threads_thread_id_apply_route.py",
     "groupTitle": "Thread",
@@ -279,6 +459,15 @@
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"items\": ThreadInvitationModel[]\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/thread_id/invite/threads_thread_id_invite_route.py",
     "groupTitle": "Thread",
@@ -301,6 +490,15 @@
           }
         ]
       }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    ThreadModel\n}",
+          "type": "JSON"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "app_routes/threads/thread_id/kick/threads_thread_id_kick_route.py",
@@ -326,6 +524,15 @@
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    ThreadMessageModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/thread_id/messages/threads_thread_id_messages_route.py",
     "groupTitle": "Thread",
@@ -350,6 +557,15 @@
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    ThreadMessageModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/threads/thread_id/messages/message_id/threads_thread_id_messages_message_id_route.py",
     "groupTitle": "Thread",
@@ -361,6 +577,15 @@
     "title": "Get user",
     "group": "User",
     "description": "<p>Get current user details</p>",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    UserModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/user/user_route.py",
     "groupTitle": "User",
@@ -372,6 +597,15 @@
     "title": "Get users",
     "group": "User",
     "description": "<p>Get last 100 created users</p>",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"items\": UserModel[]\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/users/users_route.py",
     "groupTitle": "User",
@@ -383,6 +617,15 @@
     "title": "Get user by id",
     "group": "User",
     "description": "<p>Get user details by id</p>",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    UserModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/users/user_id/users_user_id_route.py",
     "groupTitle": "User",
@@ -394,6 +637,15 @@
     "title": "Get user by username",
     "group": "User",
     "description": "<p>Get user details by username</p>",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    UserModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/users/user_name/users_user_name_route.py",
     "groupTitle": "User",
@@ -405,6 +657,15 @@
     "title": "Validate username",
     "group": "User",
     "description": "<p>Validate username. Check whether it's already taken and has correct format</p>",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    UserValidationModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/validate/username/validate_username_route.py",
     "groupTitle": "User",
@@ -449,9 +710,170 @@
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    UserModel\n}",
+          "type": "JSON"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "app_routes/signup/signup_route.py",
     "groupTitle": "User",
     "name": "PostSignup"
+  },
+  {
+    "type": "",
+    "url": "ThreadApplicationModel",
+    "title": "ThreadApplicationModel",
+    "group": "_Models",
+    "success": {
+      "examples": [
+        {
+          "title": "JSON",
+          "content": "{\n    \"createdAt\": Number,\n    \"updatedAt\": Number,\n    \"id\": String,\n    \"modelType\": \"ThreadApplicationModel\",\n    \"user\": UserId,\n    \"thread\": ThreadId,\n    \"status\": ApplicationStatusType,\n    \"deleted\": Bool\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app_models/thread_application_model.py",
+    "groupTitle": "_Models",
+    "name": "Threadapplicationmodel"
+  },
+  {
+    "type": "",
+    "url": "ThreadInvitationModel",
+    "title": "ThreadInvitationModel",
+    "group": "_Models",
+    "success": {
+      "examples": [
+        {
+          "title": "JSON",
+          "content": "{\n    \"createdAt\": Number,\n    \"updatedAt\": Number,\n    \"id\": String,\n    \"modelType\": \"ThreadInvitationModel\",\n    \"user\": UserId,\n    \"thread\": ThreadId,\n    \"status\": InvitationStatusType,\n    \"invitedBy\": UserId,\n    \"usersInThread\": UserId[],\n    \"deleted\": Bool\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app_models/thread_invitation_model.py",
+    "groupTitle": "_Models",
+    "name": "Threadinvitationmodel"
+  },
+  {
+    "type": "",
+    "url": "ThreadMessageModel",
+    "title": "ThreadMessageModel",
+    "group": "_Models",
+    "success": {
+      "examples": [
+        {
+          "title": "JSON",
+          "content": "{\n    \"createdAt\": Number,\n    \"updatedAt\": Number,\n    \"id\": String,\n    \"modelType\": \"ThreadMessageModel\",\n    \"user\": UserId,\n    \"thread\": ThreadId,\n    \"message\": String,\n    \"deleted\": Bool\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app_models/thread_message_model.py",
+    "groupTitle": "_Models",
+    "name": "Threadmessagemodel"
+  },
+  {
+    "type": "",
+    "url": "ThreadModel",
+    "title": "ThreadModel",
+    "group": "_Models",
+    "success": {
+      "examples": [
+        {
+          "title": "JSON",
+          "content": "{\n    \"createdAt\": Number,\n    \"updatedAt\": Number,\n    \"id\": String,\n    \"modelType\": \"ThreadModel\",\n    \"name\": String,\n    \"owner\": UserId,\n    \"users\": UserId[],\n    \"private\": Bool,\n    \"deleted\": Bool\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app_models/thread_model.py",
+    "groupTitle": "_Models",
+    "name": "Threadmodel"
+  },
+  {
+    "type": "",
+    "url": "UserModel",
+    "title": "UserModel",
+    "group": "_Models",
+    "success": {
+      "examples": [
+        {
+          "title": "JSON",
+          "content": "{\n    \"createdAt\": Number,\n    \"updatedAt\": Number,\n    \"id\": String,\n    \"modelType\": \"UserModel\",\n    \"username\": String,\n    \"firstname\": String,\n    \"lastname\": String\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app_models/user_model.py",
+    "groupTitle": "_Models",
+    "name": "Usermodel"
+  },
+  {
+    "type": "",
+    "url": "UsernameValidationModel",
+    "title": "UsernameValidationModel",
+    "group": "_Models",
+    "success": {
+      "examples": [
+        {
+          "title": "JSON",
+          "content": "{\n    \"createdAt\": Number,\n    \"updatedAt\": Number,\n    \"id\": String,\n    \"modelType\": \"UsernameValidationModel\",\n    \"errors\": String[]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app_models/username_validation_model.py",
+    "groupTitle": "_Models",
+    "name": "Usernamevalidationmodel"
+  },
+  {
+    "type": "",
+    "url": "ApplicationStatusType",
+    "title": "ApplicationStatusType",
+    "group": "_Types",
+    "success": {
+      "examples": [
+        {
+          "title": "ENUM",
+          "content": "1: PENDING\n2: ACCEPTED\n3: REJECTED\n4: CANCELLED",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app_types/application/status/application_status_type.py",
+    "groupTitle": "_Types",
+    "name": "Applicationstatustype"
+  },
+  {
+    "type": "",
+    "url": "InvitationStatusType",
+    "title": "InvitationStatusType",
+    "group": "_Types",
+    "success": {
+      "examples": [
+        {
+          "title": "ENUM",
+          "content": "1: PENDING\n2: ACCEPTED\n3: REJECTED\n4: CANCELLED",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app_types/invitation/status/invitation_status_type.py",
+    "groupTitle": "_Types",
+    "name": "Invitationstatustype"
   }
 ]

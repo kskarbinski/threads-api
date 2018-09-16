@@ -7,8 +7,7 @@ class ThreadApplicationsHandler(object):
         paginated_thread_application_models = Paginate(
             start=start,
             limit=limit,
-            resource=threads_applications[thread_id],
-            resource_name="applications"
+            resource=threads_applications[thread_id]
         )
 
         return paginated_thread_application_models

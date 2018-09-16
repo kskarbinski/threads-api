@@ -24,6 +24,11 @@ class SignupRoute(Resource):
         @apiParam (JSON param) {String} password Password. Length 4-20
         @apiParam (JSON param) {String} firstname First name. Length 2-20
         @apiParam (JSON param) {String} lastname Last name. Length 2-50
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                UserModel
+            }
         """
         args = self.reqparse.parse_args()
 

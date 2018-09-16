@@ -13,6 +13,11 @@ class UsersUserNameRoute(Resource):
         @api {GET} /users/<String:username> Get user by username
         @apiGroup User
         @apiDescription Get user details by username
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                UserModel
+            }
         """
         user_model = UserHandler().get(value=username, by="username")
         if user_model:

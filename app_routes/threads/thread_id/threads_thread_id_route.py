@@ -13,6 +13,11 @@ class ThreadsThreadIdRoute(Resource):
         @api {GET} /threads/<String:thread_id> Get thread
         @apiGroup Thread
         @apiDescription Get thread by id
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                ThreadModel
+            }
         """
         # Verifications
         thread_verifications = ThreadVerifications(value=thread_id)
@@ -28,6 +33,11 @@ class ThreadsThreadIdRoute(Resource):
         @api {DELETE} /threads/<String:thread_id> Delete thread
         @apiGroup Thread
         @apiDescription Delete thread by id as thread owner
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                ThreadModel
+            }
         """
         # Verifications
         thread_verifications = ThreadVerifications(value=thread_id)

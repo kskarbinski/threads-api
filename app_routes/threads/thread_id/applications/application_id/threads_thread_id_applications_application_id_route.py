@@ -22,6 +22,11 @@ class ThreadsThreadIdApplicationsApplicationIdRoute(Resource):
         @api {GET} /threads/<String:thread_id>/applications/<String:application_id> Get received thread application
         @apiGroup Thread
         @apiDescription Get received thread application by id
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                ThreadApplicationModel
+            }
         """
         caller_user_id = auth.user_id
 
@@ -51,6 +56,11 @@ class ThreadsThreadIdApplicationsApplicationIdRoute(Resource):
         @apiGroup Thread
 
         @apiParam (JSON param) {Boolean} accept Accept or reject the application
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                ThreadApplicationModel
+            }
         """
         args = self.reqparse.parse_args()
         caller_user_id = auth.user_id

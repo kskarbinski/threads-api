@@ -27,17 +27,22 @@ class ThreadsRoute(Resource):
         @api {GET} /threads Get threads
         @apiDescription Get last 100 threads created
         @apiGroup Thread
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                "items": ThreadModel[]
+            }
         """
         args = self.reqparse.parse_args()
 
         # Get paginated threads
-        paginated_threads = ThreadsHandler().get(
+        thread_models = ThreadsHandler().get(
             start=args.start,
             limit=args.limit
         )
 
         # Return paginated threads
-        return paginated_threads.jsonify()
+        return thread_models.jsonify()
 
     def post(self):
         """
@@ -46,6 +51,11 @@ class ThreadsRoute(Resource):
 
         @apiParam (JSON param) {String} name Name of the thread. Has to be unique, must not be a number, length 2-50
         @apiParam (JSON param) {Boolean} private Whether the thread is to be private or not
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                ThreadModel
+            }
         """
         args = self.reqparse.parse_args()
         user_id = auth.user_id

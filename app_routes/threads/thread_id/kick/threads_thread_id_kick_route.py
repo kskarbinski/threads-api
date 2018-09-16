@@ -21,6 +21,11 @@ class ThreadsThreadIdKickRoute(Resource):
         @apiGroup Thread
 
         @apiParam (JSON param) {String[]} users List of user ids
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                ThreadModel
+            }
         """
         args = self.reqparse.parse_args()
         caller_user_id = auth.user_id

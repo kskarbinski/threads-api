@@ -17,6 +17,11 @@ class ValidateUsernameRoute(Resource):
         @api {GET} /validate/<String:username> Validate username
         @apiGroup User
         @apiDescription Validate username. Check whether it's already taken and has correct format
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                UserValidationModel
+            }
         """
         args = self.reqparse.parse_args()
 

@@ -22,6 +22,11 @@ class ThreadsThreadIdInvitationsRoute(Resource):
         @api {GET} /threads/<String:thread_id>/invitations Get sent thread invitations
         @apiGroup Thread
         @apiDescription Get sent thread invitations
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                "items": ThreadInvitationModel[]
+            }
         """
         args = self.reqparse.parse_args()
         caller_user_id = auth.user_id

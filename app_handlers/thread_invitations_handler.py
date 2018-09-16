@@ -8,7 +8,6 @@ class ThreadInvitationsHandler(object):
             start=start,
             limit=limit,
             resource=threads_invitations[thread_id],
-            resource_name="invitations"
         )
 
         return paginated_thread_invitation_models

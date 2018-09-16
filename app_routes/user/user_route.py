@@ -12,6 +12,11 @@ class UserRoute(Resource):
         @api {GET} /user Get user
         @apiGroup User
         @apiDescription Get current user details
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                UserModel
+            }
         """
         user_model = auth.user_model
         if user_model:

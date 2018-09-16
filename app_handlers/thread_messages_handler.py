@@ -10,7 +10,6 @@ class ThreadMessagesHandler(object):
             start=start,
             limit=limit,
             resource=threads_messages[thread_id],
-            resource_name="messages"
         )
 
     def post(self, thread_model, user_id, message):

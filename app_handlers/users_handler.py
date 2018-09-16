@@ -7,6 +7,5 @@ class UsersHandler(object):
         return Paginate(
             start=start,
             limit=limit,
-            resource=users,
-            resource_name="users"
+            resource=users
         )

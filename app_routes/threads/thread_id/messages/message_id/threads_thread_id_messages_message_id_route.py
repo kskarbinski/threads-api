@@ -23,6 +23,11 @@ class ThreadsThreadIdMessagesMessageIdRoute(Resource):
         @api {GET} /threads/<String:thread_id>/messages/<String:message_id> Get thread message
         @apiGroup Thread
         @apiDescription Get thread message as member of thread
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                ThreadMessageModel
+            }
         """
         caller_user_id = auth.user_id
 
@@ -48,6 +53,11 @@ class ThreadsThreadIdMessagesMessageIdRoute(Resource):
         @apiDescription Edit thread message as message owner
 
         @apiParam (JSON param) {String} message New message. Length 1-300
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                ThreadMessageModel
+            }
         """
         args = self.reqparse.parse_args()
         caller_user_id = auth.user_id
@@ -76,6 +86,11 @@ class ThreadsThreadIdMessagesMessageIdRoute(Resource):
         @api {DELETE} /threads/<String:thread_id>/messages/<String:message_id> Remove thread message
         @apiGroup Thread
         @apiDescription Remove thread message as message owner
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                ThreadMessageModel
+            }
         """
         caller_user_id = auth.user_id
 

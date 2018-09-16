@@ -14,6 +14,11 @@ class ThreadsThreadIdApplyRoute(Resource):
         """
         @api {POST} /threads/<String:thread_id>/apply Apply to thread
         @apiGroup Thread
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                ThreadApplicationModel
+            }
         """
         caller_user_id = auth.user_id
 

@@ -18,12 +18,17 @@ class UsersRoute(Resource):
         @api {GET} /users Get users
         @apiGroup User
         @apiDescription Get last 100 created users
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                "items": UserModel[]
+            }
         """
         args = self.reqparse.parse_args()
 
-        paginated_threads = UsersHandler().get(
+        user_models = UsersHandler().get(
             start=args.start,
             limit=args.limit
         )
 
-        return paginated_threads.jsonify()
+        return user_models.jsonify()

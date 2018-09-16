@@ -25,6 +25,11 @@ class ThreadsThreadIdMessagesRoute(Resource):
         @api {GET} /threads/<String:thread_id>/messages Get thread messages
         @apiGroup Thread
         @apiDescription Get last 100 thread messages as member of thread
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                "items": ThreadMessageModel[]
+            }
         """
         args = self.reqparse.parse_args()
         caller_user_id = auth.user_id
@@ -52,6 +57,11 @@ class ThreadsThreadIdMessagesRoute(Resource):
         @apiDescription Send message in thread as thread owner
 
         @apiParam (JSON param) {String} message Message to send. Length 1-300
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                ThreadMessageModel
+            }
         """
         args = self.reqparse.parse_args()
         caller_user_id = auth.user_id

@@ -22,6 +22,11 @@ class ThreadsThreadIdInviteRoute(Resource):
         @apiGroup Thread
 
         @apiParam (JSON param) {String[]} users List of user ids
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                "items": ThreadInvitationModel[]
+            }
         """
         args = self.reqparse.parse_args()
         caller_user_id = auth.user_id
@@ -39,10 +44,10 @@ class ThreadsThreadIdInviteRoute(Resource):
             thread_verifications.verify_user_not_invited(user_id=user_id)
 
         # Create and register invitations
-        models_list = ThreadInviteHandler().post(
+        thread_invitation_models = ThreadInviteHandler().post(
             owner_user_id=caller_user_id,
             user_ids=args.users,
             thread_model=thread_model
         )
 
-        return models_list.jsonify()
+        return thread_invitation_models.jsonify()

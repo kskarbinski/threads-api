@@ -13,6 +13,11 @@ class ThreadsApplicationsApplicationIdRoute(Resource):
         @api {GET} /threads/applications/<String:application_id> Get sent thread application
         @apiDescription Get sent thread application by id
         @apiGroup Thread
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                ThreadApplicationModel
+            }
         """
         caller_user_id = auth.user_id
 
@@ -36,6 +41,11 @@ class ThreadsApplicationsApplicationIdRoute(Resource):
         @api {DELETE} /threads/applications/<String:application_id> Cancel sent thread application
         @apiDescription Cancel sent thread application by id
         @apiGroup Thread
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                ThreadApplicationModel
+            }
         """
         caller_user_id = auth.user_id
 

@@ -21,6 +21,11 @@ class ThreadsApplicationsRoute(Resource):
         @api {GET} /threads/applications Get sent thread applications
         @apiDescription Get last 100 sent thread applications for current user
         @apiGroup Thread
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                "items": ThreadApplicationModel[]
+            }
         """
         args = self.reqparse.parse_args()
         caller_user_id = auth.user_id

@@ -21,6 +21,11 @@ class ThreadsInvitationsInvitationIdRoute(Resource):
         @api {GET} /threads/invitations/<String:invitation_id> Get received thread invitation
         @apiDescription Get received thread invitation by id
         @apiGroup Thread
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                ThreadInvitationModel
+            }
         """
         caller_user_id = auth.user_id
 
@@ -45,6 +50,11 @@ class ThreadsInvitationsInvitationIdRoute(Resource):
         @apiGroup Thread
 
         @apiParam (JSON param) {Boolean} accept Accept or reject the invitation
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                ThreadInvitationModel
+            }
         """
         caller_user_id = auth.user_id
         args = self.reqparse.parse_args()

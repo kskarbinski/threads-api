@@ -20,8 +20,7 @@ class ThreadsHandler(object):
         return Paginate(
             start=start,
             limit=limit,
-            resource=thread_models,
-            resource_name="threads"
+            resource=thread_models
         )
 
     def post(self, user_id, name, private):

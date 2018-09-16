@@ -22,6 +22,11 @@ class ThreadsThreadIdApplicationsRoute(Resource):
         @api {GET} /threads/<String:thread_id>/applications Get received thread applications
         @apiGroup Thread
         @apiDescription Get received thread applications as thread owner
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                "items": ThreadApplicationModel[]
+            }
         """
         args = self.reqparse.parse_args()
         caller_user_id = auth.user_id

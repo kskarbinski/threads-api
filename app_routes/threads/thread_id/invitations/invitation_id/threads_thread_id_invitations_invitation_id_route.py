@@ -14,6 +14,11 @@ class ThreadsThreadIdInvitationsInvitationIdRoute(Resource):
         @api {GET} /threads/<String:thread_id>/invitations/<String:invitation_id> Get sent thread invitation
         @apiGroup Thread
         @apiDescription Get sent thread invitation
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                ThreadInvitationModel
+            }
         """
         caller_user_id = auth.user_id
 
@@ -42,6 +47,11 @@ class ThreadsThreadIdInvitationsInvitationIdRoute(Resource):
         @api {DELETE} /threads/<String:thread_id>/invitations/<String:invitation_id> Cancel sent thread invitation
         @apiGroup Thread
         @apiDescription Cancel sent thread invitation
+
+        @apiSuccessExample {JSON} Success-Response:
+            {
+                ThreadInvitationModel
+            }
         """
         caller_user_id = auth.user_id
 

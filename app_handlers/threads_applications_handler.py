@@ -8,7 +8,6 @@ class ThreadsApplicationsHandler(object):
             start=start,
             limit=limit,
             resource=users_thread_applications[user_id],
-            resource_name="applications"
         )
 
         return paginated_thread_application_models
