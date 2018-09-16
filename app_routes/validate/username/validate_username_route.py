@@ -14,9 +14,10 @@ class ValidateUsernameRoute(Resource):
 
     def get(self):
         """
-        @api {GET} /validate/<String:username> Validate username
+        @api {GET} /validate/username Validate username
         @apiGroup User
         @apiDescription Validate username. Check whether it's already taken and has correct format
+        @apiParam (URL query param) {String} username Validate username. Has to be unique, must not be a number, length 2-20
 
         @apiSuccessExample {JSON} Success-Response:
             {
@@ -25,15 +26,15 @@ class ValidateUsernameRoute(Resource):
         """
         args = self.reqparse.parse_args()
 
-        username_validation_model = UsernameValidationModel()
+        errors = []
 
         user_model = FindModel(models_list=users).by_username(args.username)
         if user_model:
-            username_validation_model.errors.append("Username already taken")
-            return username_validation_model.jsonify()
+            errors.append("Username already taken")
+            return UsernameValidationModel(errors=errors).jsonify()
         if args.username.isdigit():
-            username_validation_model.errors.append("Username must not be a number")
+            errors.append("Username must not be a number")
         if not validate_length(2, 20, args.username):
-            username_validation_model.errors.append("Username length must be between 2 and 20 characters")
+            errors.append("Username length must be between 2 and 20 characters")
 
-        return username_validation_model.jsonify()
+        return UsernameValidationModel(errors=errors).jsonify()

@@ -2,7 +2,7 @@ from .base_model import BaseModel
 
 
 class UsernameValidationModel(BaseModel):
-    def __init__(self):
+    def __init__(self, errors):
         """
         @api UsernameValidationModel UsernameValidationModel
         @apiGroup |Models
@@ -16,4 +16,4 @@ class UsernameValidationModel(BaseModel):
         }
         """
         super(UsernameValidationModel, self).__init__(model_type="UsernameValidationModel")
-        self.errors = []
+        self.errors = errors

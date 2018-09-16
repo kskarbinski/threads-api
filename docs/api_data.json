@@ -653,10 +653,23 @@
   },
   {
     "type": "GET",
-    "url": "/validate/<String:username>",
+    "url": "/validate/username",
     "title": "Validate username",
     "group": "User",
     "description": "<p>Validate username. Check whether it's already taken and has correct format</p>",
+    "parameter": {
+      "fields": {
+        "URL query param": [
+          {
+            "group": "URL query param",
+            "type": "String",
+            "optional": false,
+            "field": "username",
+            "description": "<p>Validate username. Has to be unique, must not be a number, length 2-20</p>"
+          }
+        ]
+      }
+    },
     "success": {
       "examples": [
         {
@@ -669,7 +682,7 @@
     "version": "0.0.0",
     "filename": "app_routes/validate/username/validate_username_route.py",
     "groupTitle": "User",
-    "name": "GetValidateStringUsername"
+    "name": "GetValidateUsername"
   },
   {
     "type": "POST",
