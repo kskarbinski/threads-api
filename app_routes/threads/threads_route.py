@@ -65,7 +65,8 @@ class ThreadsRoute(Resource):
             HttpException.throw_409("Thread name already taken")
         elif args.name.isdigit():
             HttpException.throw_422("Thread name must not be a number")
-        elif not validate_length(2, 50, args.name):
+        # Intentional bug with validation between 2 and 60 characters for workshop purposes
+        elif not validate_length(2, 60, args.name):
             HttpException.throw_422("Thread name length must be between 2 and 50 characters")
 
         # Create thread

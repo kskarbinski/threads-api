@@ -10,7 +10,7 @@ class UsersUserIdRoute(Resource):
 
     def get(self, user_id):
         """
-        @api {GET} /users/<String:user_id> Get user by id
+        @api {GET} /users/id/<String:user_id> Get user by id
         @apiGroup User
         @apiDescription Get user details by id
 
