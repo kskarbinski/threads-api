@@ -93,4 +93,4 @@ if __name__ == "__main__":
         endpoint="user_thread_application"
     )
 
-    app.run()
+    app.run("0.0.0.0", port=5000)
