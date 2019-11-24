@@ -613,7 +613,7 @@
   },
   {
     "type": "GET",
-    "url": "/users/<String:user_id>",
+    "url": "/users/id/<String:user_id>",
     "title": "Get user by id",
     "group": "User",
     "description": "<p>Get user details by id</p>",
@@ -629,11 +629,11 @@
     "version": "0.0.0",
     "filename": "app_routes/users/user_id/users_user_id_route.py",
     "groupTitle": "User",
-    "name": "GetUsersStringUser_id"
+    "name": "GetUsersIdStringUser_id"
   },
   {
     "type": "GET",
-    "url": "/users/<String:username>",
+    "url": "/users/name/<String:username>",
     "title": "Get user by username",
     "group": "User",
     "description": "<p>Get user details by username</p>",
@@ -649,7 +649,7 @@
     "version": "0.0.0",
     "filename": "app_routes/users/user_name/users_user_name_route.py",
     "groupTitle": "User",
-    "name": "GetUsersStringUsername"
+    "name": "GetUsersNameStringUsername"
   },
   {
     "type": "GET",
