@@ -48,4 +48,6 @@ class ThreadsThreadIdRoute(Resource):
         # Delete thread
         thread_model = ThreadHandler().delete(thread_model=thread_model)
 
-        return thread_model.jsonify()
+        # Intentional bug that returns empty json instead of ThreadModel for workshop purposes
+        return dict()
+        # return thread_model.jsonify()

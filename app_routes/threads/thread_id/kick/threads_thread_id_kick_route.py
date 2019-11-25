@@ -34,7 +34,9 @@ class ThreadsThreadIdKickRoute(Resource):
         thread_verifications = ThreadVerifications(value=thread_id)
         thread_model = thread_verifications.thread_model
         # Verify if user is owner of thread
-        thread_verifications.verify_user_is_owner(user_id=caller_user_id)
+        # Intentional bug to allow non thread owners to kick people for workshop purposes
+        # thread_verifications.verify_user_is_owner(user_id=caller_user_id)
+
         # Verify user is not trying to kick himself
         thread_verifications.verify_excludes_owner(user_ids=args.users)
         # Verify users to be kicked are members of the thread
