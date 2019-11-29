@@ -12,4 +12,4 @@ To run REST API:
 To run documentation:
 - go to `/docs` directory
 - within that directory run `python -m SimpleHTTPServer 5001`
-- documentation can now be accessed via http://127.0.0.1:5000
+- documentation can now be accessed via http://127.0.0.1:5001
